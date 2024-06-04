@@ -1,4 +1,50 @@
-# FsoTurmabAngular
+# fso-turmab-angular
+
+## Instalar o Angular
+[Link doc Angular](https://v17.angular.io/guide/setup-local)
+
+```
+npm install -g @angular/cli@17
+```
+
+## Criar projeto Angular
+```
+ng new fso-turmab-angular --standalone false
+```
+
+## Para rodar a aplicação
+```
+ng serve
+```
+## Para instalar o bootstrap
+```
+npm install bootstrap
+```
+
+## Aplicar o bootstrap no projeto (arquivo angular.json)
+```
+"styles": [
+    "src/styles.css",
+    "node_modules/bootstrap/dist/css/bootstrap.css"
+],
+"scripts": [
+    "node_modules/bootstrap/dist/js/bootstrap.js"
+]
+```
+## Para criar o componente (TELA)
+```
+ng generate component clientes
+```
+
+## Para criar o model
+```
+ng generate class model/cliente
+```
+
+## Para criar o serviço
+```
+ng generate service service/cliente
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
