@@ -1,16 +1,21 @@
 <main class="container">
     <h3>Clientes</h3>
+    <button 
+        (click)="btnNovo()"
+        class="btn btn-primary">Novo</button>
     <table class="table">
         <thead>
             <th>Nome</th>
             <th>Endereco</th>
             <th>Data Nascimento</th>
+            <th></th>
         </thead>
         <tbody>
             <tr *ngFor="let umCliente of listaClientes">
                 <td>{{umCliente.nome}}</td>
                 <td>{{umCliente.endereco}}</td>
                 <td>{{umCliente.dataNascimento}}</td>
+                <td><button class="btn btn-primary" (click)="btnAlterar(umCliente)">Alterar</button></td>
             </tr>
         </tbody>
     </table>

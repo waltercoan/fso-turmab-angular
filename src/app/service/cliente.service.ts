@@ -15,4 +15,14 @@ export class ClienteService {
   getClientes(){
     return this.http.get<Cliente[]>(this.apiURL);
   }
+  saveCliente(cliente:Cliente){
+    if(cliente.id == 0){
+      return this.http.post(this.apiURL,cliente);
+    }else{
+      return this.http.put(`${this.apiURL}/${cliente.id}`,cliente);
+    }
+  }
+  getClienteById(id:String){
+    return this.http.get<Cliente>(`${this.apiURL}/${id}`);
+  }
 }
